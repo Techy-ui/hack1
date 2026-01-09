@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValentineProposal</title>
+    <link rel="stylesheet" href="https://techy-ui.github.io/proposal/Frontend/Home/home.css">
+</head>
+<body>
+
+<header class="navbar">
+    <h2>
+        <img src="https://techy-ui.github.io/proposal/Frontend/logo.png" alt="logo" style="height:30px;vertical-align:middle;">
+        ValentineProposal
+    </h2>
+</header>
+
+<!-- HERO / DASHBOARD -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Make Magical Valentine’s Proposals 💖</h1>
+        <p>
+            Create beautiful, personalized Valentine’s Day proposals and surprise your loved one.
+            Make this Valentine's Day unforgettable with our magical proposal generator.
+        </p>
+
+        <div class="actions">
+            <button class="primary-btn" onclick="requireLogin()">Create Your Proposal</button>
+            <button class="outline-btn" onclick="requireLogin()">View Dashboard</button>
+        </div>
+    </div>
+</section>
+
+<!-- LOGIN / SIGNUP SECTION -->
+<section class="auth-section" id="auth">
+    <div class="auth-card">
+        <h2 id="auth-title">Login to Continue 💘</h2>
+        <p id="auth-subtitle">Please login to access this feature</p>
+
+        <!-- IMPORTANT: IDs ADDED -->
+        <form id="auth-form">
+            <input
+                type="text"
+                id="name"
+                placeholder="Full Name"
+                style="display:none"
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                required
+            >
+
+            <button type="submit" class="primary-btn full">
+                Login
+            </button>
+        </form>
+
+        <p class="toggle-text">
+            Don’t have an account?
+            <span onclick="switchToSignup()">Sign Up</span>
+        </p>
+    </div>
+</section>
+
+<script src="https://techy-ui.github.io/proposal/Frontend/Home/home.js"></script>
+</body>
+</html>
