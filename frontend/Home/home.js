@@ -13,7 +13,7 @@ function requireLogin() {
 function switchToSignup() {
     isSignup = true;
 
-    document.getElementById("auth-title").innerText = "Create Your Account 💝";
+    document.getElementById("auth-title").innerText = "Create Your Account ";
     document.getElementById("auth-subtitle").innerText =
         "Sign up and start creating magical proposals";
 

@@ -1,5 +1,5 @@
 
 setTimeout(function() {
-        window.location.href = "./Home/home.html"; 
+        window.location.href = "/frontend/home/home.html"; 
     }, 7000); 
 
