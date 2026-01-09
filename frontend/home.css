@@ -1,0 +1,186 @@
+/* ===============================
+   GLOBAL RESET & FONTS
+   =============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===============================
+   BODY BACKGROUND
+   =============================== */
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  overflow-x: hidden;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* ===============================
+   NAVBAR
+   =============================== */
+
+.navbar {
+  padding: 20px 40px;
+}
+
+.navbar h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.navbar img {
+  width: 40px;
+  height: 40px;
+}
+
+/* ===============================
+   HERO SECTION
+   =============================== */
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 40px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease;
+}
+
+.hero.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===============================
+   HERO CONTENT
+   =============================== */
+
+.hero-content {
+  max-width: 550px;
+}
+
+.hero h1 {
+  font-size: 3.3rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  margin: 20px 0;
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+/* ===============================
+   BUTTONS
+   =============================== */
+
+.actions {
+  margin-top: 30px;
+}
+
+.primary-btn {
+  background: #00f5d4;
+  color: #000;
+  border: none;
+  padding: 14px 34px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+  background: #00e0c0;
+  transform: scale(1.05);
+}
+
+/* ===============================
+   VISUAL SECTION (STUDENT → AI TWIN)
+   =============================== */
+
+.visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visual img {
+  height: 300px;
+}
+
+/* REAL STUDENT */
+.visual .real {
+  z-index: 1;
+}
+
+/* AI DIGITAL TWIN */
+.visual .twin {
+  position: absolute;
+  left: 160px;
+  top: 0;
+  opacity: 0.8;
+  filter: blur(1px) brightness(1.2);
+  transition: all 0.6s ease;
+}
+
+/* GLOW EFFECT (JS TOGGLES THIS) */
+.twin.glow {
+  filter: blur(1px) brightness(1.5)
+          drop-shadow(0 0 15px #00f5d4)
+          drop-shadow(0 0 30px #00f5d4);
+}
+
+/* ===============================
+   FADE-OUT TRANSITION (TO LOGIN)
+   =============================== */
+
+.fade-out {
+  opacity: 0;
+  transform: scale(0.98);
+  pointer-events: none;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+   =============================== */
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .visual {
+    margin-top: 40px;
+  }
+
+  .visual .twin {
+    left: 120px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .visual img {
+    height: 220px;
+  }
+
+  .visual .twin {
+    left: 100px;
+  }
+}
