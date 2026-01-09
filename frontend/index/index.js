@@ -1,5 +1,5 @@
 
 setTimeout(function() {
-        window.location.href = "/frontend/home/home.html"; 
+        window.location.href = "https://techy-ui.github.io/hack1/frontend/home/home.html"; 
     }, 7000); 
 
